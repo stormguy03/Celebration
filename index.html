@@ -78,7 +78,7 @@
     .details-intro{font:400 21px/1.35 'Italiana',Georgia,serif;margin:0;max-width:340px}
     .details-list{display:grid;grid-template-columns:1fr 1fr;gap:45px 35px}
     .detail{border-top:1px solid rgba(255,255,255,.65);padding-top:16px}
-    .detail h3{color:#F7B187;font:600 12px/1.4 'DM Sans',Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;margin:0 0 13px}
+    .detail h3{color:var(--persimmon);font:600 12px/1.4 'DM Sans',Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;margin:0 0 13px}
     .detail p{margin:0;font:400 15px/1.8 'DM Sans',Arial,sans-serif}
     .footer{background:var(--espresso);color:var(--ivory);padding:42px clamp(24px,7vw,110px);display:flex;justify-content:space-between;gap:25px;align-items:center}
     .footer .f-names{font:400 33px/1 'Italiana',Georgia,serif}
@@ -126,6 +126,10 @@
     .preferences-link:hover{color:var(--persimmon);border-color:var(--persimmon)}
     .preferences-link span{font-size:19px;line-height:1;color:var(--persimmon)}
     @media(max-width:640px){.preferences{padding:66px 27px 72px}.preferences-inner{grid-template-columns:1fr;gap:26px}.preferences h2{font-size:56px}.preferences-copy p{font-size:15px}}
+
+    /* Vector ornaments render consistently on iOS/Android instead of colored emoji. */
+    .interlude .decorative-star{display:inline-block;vertical-align:middle;flex:0 0 auto;padding:0;margin:0 20px;color:var(--persimmon)}
+    @media(max-width:640px){.interlude .decorative-star{width:12px;height:12px;margin:0 7px}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
@@ -158,14 +162,14 @@
       <a class="hero-down" href="#the-weekend">The invitation continues <span aria-hidden="true">↓</span></a>
     </section>
 
-    <div class="interlude" aria-label="Good food, good drinks, great company"><span>Good food</span><span class="dot">✳</span><span>Good drinks</span><span class="dot">✳</span><span>Great company</span></div>
+    <div class="interlude" aria-label="Good food, good drinks, great company"><span>Good food</span><svg class="dot decorative-star" viewBox="0 0 20 20" width="17" height="17" fill="none" aria-hidden="true"><path d="M10 1v18M1 10h18M3.64 3.64l12.72 12.72M16.36 3.64 3.64 16.36" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Good drinks</span><svg class="dot decorative-star" viewBox="0 0 20 20" width="17" height="17" fill="none" aria-hidden="true"><path d="M10 1v18M1 10h18M3.64 3.64l12.72 12.72M16.36 3.64 3.64 16.36" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Great company</span></div>
 
     <section class="note" aria-labelledby="note-title">
       <div>
         <p class="tiny-label note-eyebrow">A note from us</p>
         <h2 id="note-title">Dear friends,</h2>
         <p class="lead">We’re celebrating our wedding and turning thirty, and we couldn’t imagine doing it without you.</p>
-        <p class="smallcopy">Join us for a relaxed weekend upstate filled with good food, drinks, and time together. We’re looking forward to celebrating with our favorite people and making some new memories along the way.</p>
+        <p class="smallcopy">Join us for a relaxed weekend upstate filled with good food, drinks, and time together. We’re looking forward to celebrating with our favorite people.</p>
       </div>
       <div class="ink-art" aria-hidden="true">
         <svg viewBox="0 0 360 380" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M45 139q112 32 260-3c-11 71-51 115-130 118-77-7-112-46-130-115Z"/><path d="M55 156q124 21 237-2"/><path d="M175 254v88m-84 12q87-29 169 0m-169 0q90 14 169 0"/><path d="M40 130q127 43 269-3"/><circle cx="194" cy="189" r="16"/><path d="M194 173q18-34 35-46"/><path d="M191 180l-18-34m48 31q17-14 30-8"/><path d="M68 93l10-25m-25 38l-28-7M285 97l16-24m-8 33l26-3"/><path d="M140 86l5-16 5 16 16 5-16 5-5 16-5-16-16-5zM264 58l5-13 5 13 13 5-13 5-5 13-5-13-13-5z"/><path d="M76 280c14-4 25 3 30 20m-4-32c15-3 29 5 32 22m133-15c-17-3-25 6-29 21"/></svg>
@@ -188,9 +192,9 @@
 
     <section class="details" aria-labelledby="details-title">
       <div class="details-grid">
-        <div><p class="tiny-label" style="color:#F7B187">The practical bits</p><h2 id="details-title">The finer<br>details</h2><p class="details-intro">Everything you need to know, with a little more to come.</p></div>
+        <div><p class="tiny-label" style="color:var(--persimmon)">The practical bits</p><h2 id="details-title">The finer<br>details</h2><p class="details-intro">Everything you need to know, with a little more to come.</p></div>
         <div class="details-list">
-          <div class="detail"><h3>Where</h3><p>Athens, New York, near Hudson. We’ll share the house address with guests closer to the weekend.</p></div>
+          <div class="detail"><h3>Where</h3><p>Athens, New York, in the Hudson Valley. We’ll share the house address with guests closer to the weekend.</p></div>
           <div class="detail"><h3>Staying over</h3><p>We’ve rented a house for all of us, and your stay is on us.</p></div>
           <div class="detail"><h3>Food &amp; drinks</h3><p>Friday’s dinner, breakfasts, drinks, and snacks are covered. We’ll each cover our own meal at Saturday’s dinner out.</p></div>
           <div class="detail"><h3>What to bring</h3><p>Comfy clothes, swimsuit (if you want to use the sauna), formal outfit for Saturday dinner, and your favorite weekend self.</p></div>
